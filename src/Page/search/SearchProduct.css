@@ -1,0 +1,13 @@
+.buscar{
+    margin-top: 10rem;
+}
+.list-wrapper{
+  display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 50px;
+  
+  
+}

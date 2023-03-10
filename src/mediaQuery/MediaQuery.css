@@ -1,0 +1,67 @@
+@media(max-width:1353px){
+    .box__publicidad{
+        width: 500px;
+    }
+    .video-Y{
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media(max-width:1331px){
+    .box__publicidad{
+        width: 450px;
+    }
+    .video-Y{
+        width: 450px;
+        height: 300px;
+    }
+}
+
+@media(max-width:1020px){
+    .box__publicidad{
+        width: 400px;
+    }
+    .video-Y{
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media(max-width:920px){
+    .box__publicidad{
+        width: 350px;
+    }
+    .box__publicidad h1{
+        font-size: 40px;
+    }
+    .box__publicidad p{
+        font-size: 30px;
+    }
+    .video-Y{
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media(max-width:810px){
+    .box__img{
+        height: 80vh;
+    }
+    .box__publicidad{
+        width: 450px;
+    }
+    .box__publicidad h1{
+        font-size: 40px;
+    }
+    .box__publicidad p{
+        font-size: 30px;
+    }
+    .box__video{
+        margin-top: 4rem;
+    }
+    .video-Y{
+        width: 450px;
+        height: 350px;
+    }
+}

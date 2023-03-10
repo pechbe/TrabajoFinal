@@ -1,0 +1,135 @@
+
+@media(max-width: 280px) and (max-height: 654px){
+    .box__img{
+        height: 80vh;
+    }
+    .box__publicidad{
+        margin-top: -1rem;
+        width: 200px;
+    }
+    .box__publicidad h1{
+        font-size: 15px;
+    }
+    .box__publicidad p{
+        font-size: 20px;
+    }
+    .box__ver-Mas a{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .box__video{
+        margin-top: 4rem;
+    }
+    .video-Y{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 375px) and (max-height: 670px){
+    .box__img{
+        height: 130vh;
+    }
+    .box__publicidad{
+        margin-top: 7rem;
+        width: 300px;
+    }
+    .box__publicidad h1{
+        font-size: 30px;
+    }
+    .box__publicidad p{
+        font-size: 20px;
+    }
+    .box__ver-Mas a{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .box__video{
+        margin-top: 4rem;
+    }
+    .video-Y{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 420px) and (max-height: 900px){
+    .box__img{
+        height: 80vh;
+    }
+    .box__publicidad{
+        margin-top: -1rem;
+        width: 300px;
+    }
+    .box__publicidad h1{
+        font-size: 30px;
+    }
+    .box__publicidad p{
+        font-size: 20px;
+    }
+    .box__ver-Mas a{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .box__video{
+        margin-top: 4rem;
+    }
+    .video-Y{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 412px) and (max-height: 915px){
+    .box__img{
+        height: 80vh;
+    }
+    .box__publicidad{
+        margin-top: -1rem;
+        width: 300px;
+    }
+    .box__publicidad h1{
+        font-size: 30px;
+    }
+    .box__publicidad p{
+        font-size: 20px;
+    }
+    .box__ver-Mas a{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .box__video{
+        margin-top: 4rem;
+    }
+    .video-Y{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 540px) and (max-height: 720px){
+    .box__img{
+        height: 80vh;
+    }
+    .box__publicidad{
+        margin-top: -1rem;
+        width: 300px;
+    }
+    .box__publicidad h1{
+        font-size: 30px;
+    }
+    .box__publicidad p{
+        font-size: 20px;
+    }
+    .box__ver-Mas a{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .box__video{
+        margin-top: 4rem;
+    }
+    .video-Y{
+        width: 300px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,109 @@
+
+  .box__cart{
+    margin-top: 10rem;
+  }
+  /* carrito vacio */
+  .box__cart-vacio {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .box__cart-vacio img{
+    width: 40%;
+  }
+  .carrito_h1{
+    color: #fff;
+    font-weight: 700;
+  }
+  .carrito_h2{
+    color: #fff;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 35px;
+    font-size: 5vh;
+  }
+
+  /* ----------------------------------- */
+  article {
+    width: 60%;
+    margin: auto;
+  }
+  
+  .cart_box img {
+    width: 50px;
+    height: 50px;
+  }
+  .cart_img {
+    display: flex;
+    width: 400px;
+  }
+  
+  .cart_img p {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .cart_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom: 2px solid skyblue;
+    padding-bottom: 5px;
+  }
+  .cart_box p{
+    color: #fff;
+  }
+  .cart_box div:nth-child(2) button {
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .cart_box div:nth-child(3) button {
+    padding: 5px 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgb(95, 95, 95);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .cart_box div:nth-child(3) button:hover {
+    background-color: rgb(70, 141, 137);
+  }
+  .cart_box div:nth-child(3) span {
+    background-color: rgb(111, 170, 204);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20rem;
+  }
+
+  .price{
+    margin-top: 5rem;
+  }
+  
+  .total span:nth-child(1) {
+    font-size: 2rem;
+    color: rgb(223, 223, 223);
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .total span:nth-child(2) {
+    font-size: 2rem;
+    color: rgb(238, 238, 238);
+    font-weight: bold;
+  }
+  

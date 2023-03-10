@@ -1,0 +1,236 @@
+/* header */
+.header{
+    margin: auto;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 5rem;
+    z-index: 10;
+}
+.box__logo img{
+    width: 80px;
+    border-radius: 50%;
+}
+.nav__superior{
+}
+.nav__1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    background-color: rgb(31, 29, 29);
+}
+.box__icons-nav1{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.link-ico{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.cart {
+    display: inline;
+    margin-top: -10px;
+}
+.cart i{
+    font-size: 20px;
+    color: #fff;
+}
+/* navinferior nav2*/
+.nav__inferior{
+}
+.search2{
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+}
+.ham-burger{
+    padding-right: 25px;
+    position: absolute;
+    top: 85px;
+}
+.ham-burgerI{
+    padding-right: 25px;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    margin-right: 15px;
+}
+.nav__2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.959);
+    padding: .5rem 1rem;
+}
+.frm__search1{
+    display: none;
+}
+.nav__2 .links{
+    display: flex;
+    gap: 40px;
+    margin-left: 1rem;
+}
+.links li{
+    list-style: none;
+}
+.nav-link{
+    text-decoration: none;
+    color: #f0f0f0;
+}
+#menu-links{
+    /* position: absolute; */
+    /* top: -700px;
+    left: -2000px; */
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#menu-links.active{
+    width: 100%;
+    display: block;
+    position: relative;
+    font-size: 1.5rem;
+    /* position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    text-align: center; */
+}
+
+/* navlinks */
+.active{
+}
+.active > span{
+    color: #f0f0f0;
+    border-bottom: 4px solid yellow;
+}
+
+
+
+.cart {
+    cursor: pointer;
+  }
+  .cart span:nth-child(1) {
+    font-size: 2rem;
+    color: white;
+  }
+  .cart span:nth-child(2) {
+    padding: 0 3px;
+    background-color: rgb(87, 87, 87);
+    color: white;
+    font-weight: bolx;
+    border-radius: 5px;
+    position: relative;
+    top: -15px;
+  }
+
+/* ham */
+@media(min-width: 768px){
+    .ham-burger{
+        display: none;
+    }
+    #menu-links{
+        position: initial;
+        margin: 0;
+        display: flex;
+        font-size: 1rem;
+    }
+    #menu-links.active{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .nav-link span{
+        color: rgba(247, 238, 238, 0.911);
+    }
+    .nav__2{
+        background-color: rgba(51, 51, 51, 0.945);
+    }
+}
+
+/* ham 2 */
+@media(min-width: 768px){
+    .ham-burgerI{
+        display: none;
+    }
+    #menu-linksI{
+        position: initial;
+        margin: 0;
+        display: flex;
+        font-size: 1rem;
+    }
+    #menu-linksI.active{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+/* ham2 */
+.linksI{
+    display: none;
+}
+#menu-linksI{
+    /* position: absolute; */
+    /* top: -700px;
+    left: -2000px; */
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#menu-linksI.active{
+    width: 100%;
+    display: block;
+    position: relative;
+    font-size: 1.5rem;
+    /* position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    text-align: center; */
+}
+
+/* ---------------------------------------------------------------- */
+@media(max-width: 770px){
+    .search2{
+        display: none;
+    }
+    .frm__search1{
+        display: flex;
+        font-size: 1rem;
+        justify-content: center;
+    }
+    .search1{
+        text-align: center;
+        border-radius: 25px;
+        padding: 1px 0;
+        border: none;
+        margin-top: 20px;
+    }
+    .nav__2{
+        padding: 2rem 1rem;
+    }
+    .box__icons-nav1{
+        display: none;
+    }
+    .linksI{
+        display: flex;
+    }
+}

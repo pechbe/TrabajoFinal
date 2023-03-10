@@ -1,0 +1,26 @@
+.box__card{
+    background-color: rgba(83, 81, 81, 0.712);
+}
+.box__img-card img{
+    width: 200px;
+    height: 200px;
+}
+.button{
+    font-weight: 700px;
+}
+.button-add-car{
+    border-radius: 25px;
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+}
+.button-add-view{
+    border-radius: 25px;
+    padding: 10px 15px;
+    border: none;
+}
+
+.button:hover{
+    background-color: #000;
+    color: white;
+}

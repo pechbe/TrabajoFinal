@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* incio */
+.box__inicio{
+    margin-top: 8.3rem;
+    height: auto;
+}
+.box__img{
+    background-image: url('../assets/img/images/auto-deportivo2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: auto;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.box__container-ini{
+    width: 100%;
+}
+.box__message{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10%;
+}
+
+/* titulo, text y button */
+.box__publicidad{
+    width: 600px;
+    background-color: #f1eeee25;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 0 5px 5px #fff;
+}
+.box__publicidad h1{
+    font-size: 4.5rem;
+    color: #f2eee9;
+    font-weight: 700;
+    text-shadow: 7px 7px 7px #3b3b3b;
+}
+.box__publicidad p{
+    padding-top: 2rem;
+    color: #f2eee3;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 10px 10px 5px #3b3b3b;
+}
+.box__ver-Mas{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.box__ver-Mas a{
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: none;
+    background-color: #868580;
+    color: #474E68;
+    box-shadow: 0 0 5px 5px #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 3px 3px 4px #fff;
+    font-size: 20px;
+}
+#ver-mas{
+    width: 100px;
+    height: 50px;
+}
+
+/* box video */
+.box__video{
+    border-radius: 25px;
+}
+.video-Y{
+    width: 600px;
+    height: 330px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px 5px #fff;
+}
+
+/* card */
+.box__card img{
+    width: 200px;
+    border: 3px solid #a5a1a1;
+    border-radius: 25px;
+}
+.box__container-principal{
+    max-width: 90%;
+    margin: auto;
+    padding-top: .5rem;
+    padding-bottom: 5rem;
+}
+.box__container-card{
+    border: 3px solid #a5a1a1;
+    border-radius: 25px;
+    padding: 40px 10px;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    background-image: url(../assets/img/images/auto-deportivo2.webp);
+    background-color: rgba(31, 112, 112, 0.452);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.box__container-card h3{
+    padding-bottom: 25px;
+    color: #f2eee3;
+    font-weight: 700;
+}
+.box__section-card{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 50px;
+}
+.box__card{
+    border: 3px solid #a5a1a1;
+    border-radius: 25px;
+    width: 300px;
+    height: 450px;
+    padding: 15px 0;
+}
+.box__card img{
+    width: 200px;
+    border: solid;
+    border-radius: 20px;
+}
+
+
+/* card-carrito */
+.section-galery {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .cards {
+    width: 250px;
+    padding: 20px;
+  }
+  .cards:hover {
+    box-shadow: 0 10px 10px 10px rbga(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .image_box img {
+    width: 150px;
+    height: 200px;
+  }
+  
+  .image_box img {
+    width: 150px;
+    height: 200px;
+  }
+  .details p:nth-child(1) {
+    font-weight: bold;
+  }
+  .details p:nth-child(2) {
+    color: grey;
+    font-size: 0.8rem;
+  }
+  .details p:nth-child(3) {
+    font-weight: bolx;
+    color: grey;
+  }
+  .details button {
+    padding: 5px 10px;
+    border: none;
+    font-weight: bold;
+    background-color: skyblue;
+    outline: none;
+  }
+.box__card h4, .box__card p{
+    color: #f2eee3;
+    font-weight: 700;
+}
+
