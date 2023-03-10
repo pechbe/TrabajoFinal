@@ -18,8 +18,7 @@ const Router = () => {
 
   const handleClick = (item) => {
     if (cart.indexOf(item) !== -1) return;
-    console.log (cart);
-    setCart([...cart, item]);
+    setCart([...cart, {...item,amount: 1}]);
   };
 
   const handleChange = (item, d) => {

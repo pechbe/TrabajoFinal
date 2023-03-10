@@ -5,7 +5,6 @@ import Modal from "../Components/Modal";
 import styled from "styled-components";
 
 const Cart = ({cart, setCart, handleChange}) => {
-    let cont = 1
     const [price, setPrice] = useState(0);
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
 
@@ -14,11 +13,24 @@ const Cart = ({cart, setCart, handleChange}) => {
         setCart(arr);
         handlePrice();
     };
+
     const handlePrice = () => {
         let ans = 0;
-        cart.map((item) => (ans += item.cont * item.price));
+        cart.map((item) => (ans += item.amount * item.price));
         setPrice(ans);
     };
+
+    // const handleAmont = (id) =>{
+    //   const cont = cart.map((item) => {
+    //     if(item.id === id){
+    //       return {
+    //         ...item,
+    //         amount: item.amount + 1
+    //       }
+    //     }
+    //     return item
+    //   })
+    // }
 
     const recorrer = () =>{
       const parentlist =document.querySelector('#det__cart');
@@ -73,7 +85,7 @@ const Cart = ({cart, setCart, handleChange}) => {
             </div>
             <div className="item_amount">
               <button onClick={() => handleChange(item, -1)}>-</button>
-              <button id='item_amount' >{cont}</button>
+              <button id='item_amount' >{item.amount}</button>
               <button onClick={() => handleChange(item, 1)}>+</button>
             </div>
             <div>
