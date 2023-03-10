@@ -5,6 +5,7 @@ import Modal from "../Components/Modal";
 import styled from "styled-components";
 
 const Cart = ({cart, setCart, handleChange}) => {
+    let cont = 1
     const [price, setPrice] = useState(0);
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
 
@@ -15,7 +16,7 @@ const Cart = ({cart, setCart, handleChange}) => {
     };
     const handlePrice = () => {
         let ans = 0;
-        cart.map((item) => (ans += item.amount * item.price));
+        cart.map((item) => (ans += item.cont * item.price));
         setPrice(ans);
     };
 
@@ -38,7 +39,6 @@ const Cart = ({cart, setCart, handleChange}) => {
         document.getElementById("tabla").innerHTML += '<tbody><td>'+ elemento.innerText +'</td><td>'+ elemento2.innerText +'</td><td>'+ elemento3.innerText +'</td></tbody>'
         
       }
-      
     }
  
     useEffect(() => {
@@ -61,7 +61,7 @@ const Cart = ({cart, setCart, handleChange}) => {
         </div>
       </div>  
       : null}
-      const effee = document.getElement
+      {/* const effee = document.getElement */}
       <div className='det__cart' id = 'det__cart'>
         {cart.map((item) => (
           
@@ -69,13 +69,12 @@ const Cart = ({cart, setCart, handleChange}) => {
             <div className="cart_img">
               <img src={item.image} alt="" />
               <p id='item_name' >{item.name}</p>
-              <p>{item.mainCategory}</p>
-              <p>{item.secondaryCategory}</p>
+              <p>{item.price}</p>
             </div>
             <div className="item_amount">
-              <button onClick={() => handleChange(item, 1)}>+</button>
-              <button id='item_amount' >{item.amount}</button>
               <button onClick={() => handleChange(item, -1)}>-</button>
+              <button id='item_amount' >{cont}</button>
+              <button onClick={() => handleChange(item, 1)}>+</button>
             </div>
             <div>
               <span id = 'item_price'>{item.price}</span>
@@ -89,7 +88,7 @@ const Cart = ({cart, setCart, handleChange}) => {
         <span className='price price-1'>Monto total</span>
         <span className='price price-2'>S/  {price}</span>
         <ContenedorBotones>
-          <Boton onClick={()=>cambiarEstadoModal1(!estadoModal1, recorrer)}>Modal1</Boton>
+          <Boton onClick={()=>cambiarEstadoModal1(!estadoModal1)}>Modal1</Boton>
         </ContenedorBotones>
       </div>
 

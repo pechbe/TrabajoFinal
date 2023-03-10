@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Page/Inicio.css";
 import "../mediaQuery/MediaQuery.css";
 import "../mediaQuery/MediaQueryM.css";
@@ -9,6 +9,18 @@ import acceso from "../data/accesorios";
 import lubri from "../data/lubricantes"
 
 const Inicio = ({ handleClick }) => {
+
+  const [articulos, setArticulos] = useState([])
+  useEffect(()=>{
+    fetch('http://127.0.0.1:5000/products?page=1&per_page=50', {
+      headers: {
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3ODQwODkxNCwianRpIjoiN2E3NDk4OGItNTY3OC00OWUyLTlmOTAtNjZmMDlmOWY2ZTEyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjc4NDA4OTE0LCJleHAiOjE2Nzg0MjY5MTR9.ejQ7NN191d9Cr0Hll06auZlyb5lHK2lL7IB6RGScBQk'
+      }
+    })
+    .then((response)=> response.json())
+    .then((json)=> setArticulos(json.results))
+  }, [])
+
   return (
     <div className="box__inicio" id="box__ini">
       <div className="box__img">
@@ -49,60 +61,11 @@ const Inicio = ({ handleClick }) => {
 
       <div className="box__container-principal">
         <div className="box__container-card">
-          <h3>Motores</h3>
+          <h3>Articulos</h3>
           <div className="box__section-card">
-
-            {mot.map((item) => (
+          {articulos.map((item) => (
               <Card key={item.id} item={item} handleClick={handleClick} />
             ))}
-          </div>
-        </div>
-
-        <div className="box__container-card">
-          <h3>Repuestos</h3>
-          <div className="box__section-card">
-
-
-          {repus.map((item) => (
-              <Card key={item.id} item={item} handleClick={handleClick} />
-            ))}
- 
-          </div>
-        </div>
-
-        <div className="box__container-card">
-          <h3>Accesorios</h3>
-          <div className="box__section-card">
-          {acceso.map((item) => (
-              <Card key={item.id} item={item} handleClick={handleClick} />
-            ))}
-
-            {/* <div className="box__card">
-              <picture>
-                <img src={imgEjem} alt="" />
-              </picture>
-              <h4>NOMBRE: </h4>
-              <p>PRECIO: </p>
-              <button>Ver mas</button>
-            </div> */}
-          </div>
-        </div>
-
-        <div className="box__container-card">
-          <h3>Lubricantes</h3>
-          <div className="box__section-card">
-
-          {lubri.map((item) => (
-              <Card key={item.id} item={item} handleClick={handleClick} />
-            ))}
-            {/* <div className="box__card">
-              <picture>
-                <img src={imgEjem} alt="" />
-              </picture>
-              <h4>NOMBRE: </h4>
-              <p>PRECIO: </p>
-              <button>Ver mas</button>
-            </div> */}
           </div>
         </div>
       </div>
