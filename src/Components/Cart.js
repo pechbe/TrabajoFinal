@@ -124,7 +124,7 @@ const Cart = ({cart, setCart, handleChange}) => {
         <span className='price price-1'>Monto total</span>
         <span className='price price-2'>S/  {price}</span>
         <ContenedorBotones>
-          <Boton onClick={mostrarModal}>Resumen de venta</Boton>
+          <Boton0 onClick={mostrarModal}>Resumen de venta</Boton0>
         </ContenedorBotones>
       </div>
 
@@ -144,9 +144,9 @@ const Cart = ({cart, setCart, handleChange}) => {
 
           <Contenido>
             <div id='buttons-modal'>
-              <Boton id = "confirmar" hidden ={estadoBtnMsj} onClick={recorrer}>Si</Boton>
-              <Boton id='btn-comprar' onClick={mostrarAlerta} hidden ={!estadoBtnMsj} >Comprar</Boton>
-              <Boton1 id='btn-salir' onClick={()=>cambiarEstadoModal1(!estadoModal1)} >Salir</Boton1>
+              <Boton0 id = "confirmar" hidden ={estadoBtnMsj} onClick={recorrer}>Si</Boton0>
+              <Boton1 id='btn-comprar' onClick={mostrarAlerta} hidden ={!estadoBtnMsj} >Comprar</Boton1>
+              <Boton2 id='btn-salir' onClick={()=>cambiarEstadoModal1(!estadoModal1)} >Salir</Boton2>
             </div>
             
             <div id='montoT'>
@@ -170,7 +170,25 @@ const ContenedorBotones = styled.div`
 	gap: 20px;
 `;
 
-const Boton = styled.button`
+const Boton0 = styled.button`
+	display: block;
+	padding: 10px 30px;
+	border-radius: 100px;
+	color: black;
+	border: n2px;
+	background: white;
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	transition: .3s ease all;
+
+	&:hover {
+		background: black;
+    color: white;
+	}
+`;
+
+const Boton1 = styled.button`
 	display: block;
 	padding: 10px 30px;
 	border-radius: 100px;
@@ -187,7 +205,7 @@ const Boton = styled.button`
 	}
 `;
 
-const Boton1 = styled.button`
+const Boton2 = styled.button`
 	display: block;
 	padding: 10px 30px;
 	border-radius: 100px;
@@ -232,5 +250,9 @@ const Contenido = styled.div`
 
   #montoT{
     margin-left: 60px;
+  }
+
+  #btn-salir{
+    margin-left: 15px;
   }
 `;
