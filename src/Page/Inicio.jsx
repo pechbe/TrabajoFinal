@@ -14,7 +14,7 @@ const Inicio = ({ handleClick }) => {
   useEffect(()=>{
     fetch('http://127.0.0.1:5000/products?page=1&per_page=50', {
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3ODQwODkxNCwianRpIjoiN2E3NDk4OGItNTY3OC00OWUyLTlmOTAtNjZmMDlmOWY2ZTEyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjc4NDA4OTE0LCJleHAiOjE2Nzg0MjY5MTR9.ejQ7NN191d9Cr0Hll06auZlyb5lHK2lL7IB6RGScBQk'
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3ODQ5NDM0MywianRpIjoiZDFlMWRkNmMtMGIwYi00ZWM5LTk1MTItM2Q4MzAxNTk5YmFkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjc4NDk0MzQzLCJleHAiOjE2Nzg1MTIzNDN9.t1ii17ghCvMRcJFndqA9gY2_rz_I-dMsDrn446V-4_o'
       }
     })
     .then((response)=> response.json())
