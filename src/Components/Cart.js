@@ -3,41 +3,43 @@ import imgCarrito from '../assets/img/images/carrito-de-compras.png'
 import "../Components/Cart.css";
 import Modal from "../Components/Modal";
 import styled from "styled-components";
+import swal from 'sweetalert';
 
 const Cart = ({cart, setCart, handleChange}) => {
     const [price, setPrice] = useState(0);
     const [estadoModal1, cambiarEstadoModal1] = useState(false);
+    const [estadoBtnMsj, cambEstBtnMsj] = useState(false);
 
     const handleRemove = (id) => {
         const arr = cart.filter((item) => item.id !== id);
         setCart(arr);
         handlePrice();
     };
-
     const handlePrice = () => {
         let ans = 0;
         cart.map((item) => (ans += item.amount * item.price));
         setPrice(ans);
     };
 
-    // const handleAmont = (id) =>{
-    //   const cont = cart.map((item) => {
-    //     if(item.id === id){
-    //       return {
-    //         ...item,
-    //         amount: item.amount + 1
-    //       }
-    //     }
-    //     return item
-    //   })
-    // }
+    const mostrarModal = () =>{
+      cambiarEstadoModal1(!estadoModal1)
+      cambEstBtnMsj(false)
+    }
+
+    const mostrarAlerta=()=>{
+      swal({
+        text:"Su compra ha sido realizada",
+        icon: "success",
+        button: "Aceptar"
+      });
+    }
 
     const recorrer = () =>{
       const parentlist =document.querySelector('#det__cart');
       const listChildren = parentlist.childNodes;
-      //console.log(listChildren);
+
       for (let i=0; i< listChildren.length; i++){
-        //console.log(listChildren[i])
+        
         let elemento = listChildren[i].querySelector('#item_name');
         console.log(elemento.innerText)
 
@@ -47,10 +49,21 @@ const Cart = ({cart, setCart, handleChange}) => {
         let elemento3 = listChildren[i].querySelector('#item_price');
         console.log(elemento3.innerText)
 
-        //console.log(listChildren[i])
         document.getElementById("tabla").innerHTML += '<tbody><td>'+ elemento.innerText +'</td><td>'+ elemento2.innerText +'</td><td>'+ elemento3.innerText +'</td></tbody>'
         
-      }
+        
+      };
+      const head1 = document.getElementById("head1")
+      head1.textContent = "Descripción";
+
+      const head2 = document.getElementById("head2")
+      head2.textContent = "Cantidad";
+
+      const head3 = document.getElementById("head3")
+      head3.textContent = "Precio";
+
+      cambEstBtnMsj(!estadoBtnMsj)
+      
     }
  
     useEffect(() => {
@@ -73,7 +86,7 @@ const Cart = ({cart, setCart, handleChange}) => {
         </div>
       </div>  
       : null}
-      {/* const effee = document.getElement */}
+      const effee = document.getElement
       <div className='det__cart' id = 'det__cart'>
         {cart.map((item) => (
           
@@ -81,12 +94,13 @@ const Cart = ({cart, setCart, handleChange}) => {
             <div className="cart_img">
               <img src={item.image} alt="" />
               <p id='item_name' >{item.name}</p>
-              <p>{item.price}</p>
+              <p>{item.mainCategory}</p>
+              <p>{item.secondaryCategory}</p>
             </div>
             <div className="item_amount">
-              <button onClick={() => handleChange(item, -1)}>-</button>
-              <button id='item_amount' >{item.amount}</button>
               <button onClick={() => handleChange(item, 1)}>+</button>
+              <button id='item_amount' >{item.amount}</button>
+              <button onClick={() => handleChange(item, -1)}>-</button>
             </div>
             <div>
               <span id = 'item_price'>{item.price}</span>
@@ -100,13 +114,10 @@ const Cart = ({cart, setCart, handleChange}) => {
         <span className='price price-1'>Monto total</span>
         <span className='price price-2'>S/  {price}</span>
         <ContenedorBotones>
-          <Boton onClick={()=>cambiarEstadoModal1(!estadoModal1)}>Modal1</Boton>
+          <Boton onClick={mostrarModal}>Resumen de venta</Boton>
         </ContenedorBotones>
       </div>
 
-      
-      
-   
         <Modal
           estado = {estadoModal1}
           cambiarEstado = {cambiarEstadoModal1}
@@ -114,17 +125,20 @@ const Cart = ({cart, setCart, handleChange}) => {
           <table className="table" id ="tabla">
               <thead className='thead-inverse'>
                 <tr>
-                <th>Descripción</th>
-                <th>Cantidad</th>
-                <th>Precio</th>
+                <th id = "head1">Desea ver el Resumen de venta?</th>
+                <th id = "head2"></th>
+                <th id = "head3"></th>
                 </tr>
               </thead>
             </table>
 
           <Contenido>
-           
+            <Boton id = "confirmar" hidden ={estadoBtnMsj} onClick={recorrer}>Si</Boton>
+            <Boton onClick={()=>cambiarEstadoModal1(!estadoModal1)} >Salir</Boton>
+            <Boton onClick={mostrarAlerta} hidden ={!estadoBtnMsj} >Comprar</Boton>
 
-            <Boton onClick={recorrer} >Pagar</Boton>
+            <span hidden ={!estadoBtnMsj}>Monto total</span>
+            <span hidden ={!estadoBtnMsj}>S/  {price}</span>
           </Contenido>
         </Modal>
        
@@ -161,7 +175,7 @@ const Boton = styled.button`
 
 const Contenido = styled.div`
 	display: flex;
-	flex-direction: column;
+
 	align-items: center;
 
 	h1 {

@@ -16,10 +16,8 @@ const Modal = ({children, estado, cambiarEstado, cambios}) =>{
                             </svg>
                         </BotonCerrar>
                         {children}
+                        
                     </ContenedorModal>
-
-                   
-
                 </Overlay>
             }
         </>
