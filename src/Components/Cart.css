@@ -70,20 +70,24 @@
     border: none;
     outline: none;
     color: white;
-    background-color: rgb(95, 95, 95);
+    /* background-color: rgb(95, 95, 95); */
+    background-color: #900000;
     border-radius: 5px;
     cursor: pointer;
   }
   .cart_box div:nth-child(3) button:hover {
-    background-color: rgb(70, 141, 137);
+    /* background-color: rgb(70, 141, 137); */
+    background-color: red;
   }
   .cart_box div:nth-child(3) span {
-    background-color: rgb(111, 170, 204);
+    /* background-color: rgb(111, 170, 204); */
+    background-color: rgb(39, 51, 39);
+    color: white;
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 10px;
   }
-  
+
   .total {
     display: flex;
     justify-content: space-between;

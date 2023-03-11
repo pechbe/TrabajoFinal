@@ -98,7 +98,7 @@ const Cart = ({cart, setCart, handleChange}) => {
         </div>
       </div>  
       : null}
-      const effee = document.getElement
+      {/* const effee = document.getElement */}
       <div className='det__cart' id = 'det__cart'>
         {cart.map((item) => (
           
@@ -106,13 +106,11 @@ const Cart = ({cart, setCart, handleChange}) => {
             <div className="cart_img">
               <img src={item.image} alt="" />
               <p id='item_name' >{item.name}</p>
-              <p>{item.mainCategory}</p>
-              <p>{item.secondaryCategory}</p>
             </div>
             <div className="item_amount">
-              <button onClick={() => handleChange(item, 1)}>+</button>
-              <button id='item_amount' >{item.amount}</button>
               <button onClick={() => handleChange(item, -1)}>-</button>
+              <button id='item_amount' >{item.amount}</button>
+              <button onClick={() => handleChange(item, 1)}>+</button>
             </div>
             <div>
               <span id = 'item_price'>{item.price}</span>
@@ -145,12 +143,16 @@ const Cart = ({cart, setCart, handleChange}) => {
             </table>
 
           <Contenido>
-            <Boton id = "confirmar" hidden ={estadoBtnMsj} onClick={recorrer}>Si</Boton>
-            <Boton onClick={()=>cambiarEstadoModal1(!estadoModal1)} >Salir</Boton>
-            <Boton onClick={mostrarAlerta} hidden ={!estadoBtnMsj} >Comprar</Boton>
-
-            <span hidden ={!estadoBtnMsj}>Monto total</span>
-            <span hidden ={!estadoBtnMsj}>S/  {price}</span>
+            <div id='buttons-modal'>
+              <Boton id = "confirmar" hidden ={estadoBtnMsj} onClick={recorrer}>Si</Boton>
+              <Boton id='btn-comprar' onClick={mostrarAlerta} hidden ={!estadoBtnMsj} >Comprar</Boton>
+              <Boton1 id='btn-salir' onClick={()=>cambiarEstadoModal1(!estadoModal1)} >Salir</Boton1>
+            </div>
+            
+            <div id='montoT'>
+              <b><span hidden ={!estadoBtnMsj}>Monto total: </span> </b>
+              <b><span hidden ={!estadoBtnMsj}>S/.{price}</span> </b>
+            </div>
           </Contenido>
         </Modal>
        
@@ -174,22 +176,38 @@ const Boton = styled.button`
 	border-radius: 100px;
 	color: #fff;
 	border: none;
-	background: #1766DC;
+	background: green;
 	cursor: pointer;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	transition: .3s ease all;
 
 	&:hover {
-		background: #0066FF;
+		background: green;
+	}
+`;
+
+const Boton1 = styled.button`
+	display: block;
+	padding: 10px 30px;
+	border-radius: 100px;
+	color: #fff;
+	border: none;
+	background: red;
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	transition: .3s ease all;
+
+	&:hover {
+		background: red;
 	}
 `;
 
 const Contenido = styled.div`
-	display: flex;
-
-	align-items: center;
-
+  display: flex;
+  align-items: space-between;
+  
 	h1 {
 		font-size: 42px;
 		font-weight: 700;
@@ -206,4 +224,13 @@ const Contenido = styled.div`
 		vertical-align: top;
 		border-radius: 3px;
 	}
+
+  #buttons-modal{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #montoT{
+    margin-left: 60px;
+  }
 `;
