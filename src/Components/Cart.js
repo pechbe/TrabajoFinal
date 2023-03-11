@@ -34,6 +34,18 @@ const Cart = ({cart, setCart, handleChange}) => {
       });
     }
 
+    // const handleAmont = (id) =>{
+    //   const cont = cart.map((item) => {
+    //     if(item.id === id){
+    //       return {
+    //         ...item,
+    //         amount: item.amount + 1
+    //       }
+    //     }
+    //     return item
+    //   })
+    // }
+
     const recorrer = () =>{
       const parentlist =document.querySelector('#det__cart');
       const listChildren = parentlist.childNodes;
