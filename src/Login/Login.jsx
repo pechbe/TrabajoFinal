@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom'
 import '../Login/Login.css'
 
 const Login = () => {
-
-
-
   return (
     <div className='login-container'>
       <div className='login-form'>

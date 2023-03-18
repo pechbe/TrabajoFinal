@@ -103,7 +103,7 @@ const Header = ({ setShow, size }) => {
                 to="/buscar"
                 activeclassname="active"
               >
-                <span className="my_shop" onClick={() => setShow(true)}>
+                <span id='ver-mas-list'className="my_shop" onClick={() => setShow(true)}>
                   ver mas
                 </span>{" "}
               </NavLink>

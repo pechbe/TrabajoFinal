@@ -1,4 +1,7 @@
 /* header */
+*{
+    list-style: none;
+}
 .header{
     margin: auto;
     position: fixed;
@@ -206,7 +209,10 @@
     right: 0;
     text-align: center; */
 }
-
+#ver-mas-list{
+    text-align: none;
+    list-style: none;
+}
 /* ---------------------------------------------------------------- */
 @media(max-width: 770px){
     .search2{
