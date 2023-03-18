@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "../../Components/card";
-
+import {Navigate} from "react-router-dom";
 
 import allProductos from "../../data/allProductos";
 
@@ -30,6 +30,10 @@ const SearchProduct = (handleClick) => {
 
     setFilteredList(filterList);
   };
+
+  if(!localStorage.getItem("token")){
+    <Navigate to="/login"/>
+  }
 
   return (
     <div className="buscar">
