@@ -1,18 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import '../Login/Login.css'
-import { signIn } from "../AuthServices";
-import { useNavigate } from "react-router-dom";
+import '../Login/SignIn.css'
 
 const Login = () => {
   
-  const { authentication, setAuthentication } = useContext();
-  const [userCredentials, setUserCredentials] = useState({
-    username: "",
-    password: "",
-  });
   const navigate = useNavigate();
+
   const [user, setUser] = useState({
     username: "",
     password: ""
@@ -62,14 +56,6 @@ const Login = () => {
               <i className="fa-solid fa-lock"></i>
               <input type='password' name='password' onChange={handleInputChange}  className='form-control' id='password' placeholder='Ingrese su contraseña' required/>
             </label>
-            <input
-              type="text"
-              className="Auth-modal-input"
-              id="username"
-              name="username"
-              value={userCredentials.username}
-              onChange={handleInputChange}
-            />
           </div>
           <Link to='/recupera' className='login-link'>Olvidaste tu Contraseña</Link>
           <div className='form-group'>
@@ -80,17 +66,6 @@ const Login = () => {
           <div className='remember'>
             <label><input type="checkbox" />Recordar mi Cuenta</label>
           </div>
-          <button
-            className="Auth-modal-button"
-            type="submit"
-            disabled={authentication.isLoading ? true : false}
-          >
-            Iniciar sesión
-          </button>
-          <p className="Auth-modal-option">
-            ¿No tienes cuenta?{" "}
-            <span onClick={handleChangeLoginToRegister}>Registrar</span>
-          </p>
         </form>
       </div>
     </div>
