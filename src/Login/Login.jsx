@@ -6,8 +6,6 @@ import { signIn } from "../AuthServices";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-<<<<<<< HEAD
-=======
   
   const { authentication, setAuthentication } = useContext();
   const [userCredentials, setUserCredentials] = useState({
@@ -46,7 +44,6 @@ const Login = () => {
     }
   };
 
->>>>>>> daniel-S
   return (
     <div className='login-container'>
       <div className='login-form'>
